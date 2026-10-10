@@ -214,6 +214,9 @@
 
   function validWebUrl(value) {
     if (!value) return "";
+    if (/^files\/[a-zA-Z0-9._%-]+$/.test(value) && !value.includes("..")) {
+      return new URL(value, document.baseURI).href;
+    }
     try {
       const url = new URL(value);
       return ["http:", "https:"].includes(url.protocol) ? url.href : "";
@@ -226,7 +229,7 @@
     const safeUrl = validWebUrl(value);
     if (!safeUrl) return "";
     const url = new URL(safeUrl);
-    if (!url.hostname.endsWith("drive.google.com")) return safeUrl;
+    if (url.hostname !== "drive.google.com" && !url.hostname.endsWith(".drive.google.com")) return safeUrl;
     const pathMatch = url.pathname.match(/\/file\/d\/([^/]+)/);
     const fileId = pathMatch?.[1] || url.searchParams.get("id");
     return fileId ? `https://drive.google.com/uc?export=download&id=${encodeURIComponent(fileId)}` : safeUrl;
@@ -238,7 +241,7 @@
     const actions = [];
     if (viewUrl) {
       actions.push(
-        `<a class="primary-button" href="${escapeHtml(viewUrl)}" target="_blank" rel="noopener noreferrer">Посмотреть в Google</a>`
+        `<a class="primary-button" href="${escapeHtml(viewUrl)}" target="_blank" rel="noopener noreferrer">Открыть материал</a>`
       );
     }
     if (downloadUrl) {

@@ -1,5 +1,8 @@
 .openai/
 dist/
+.editor-backups/
+editor/
+start-editor.bat
 .env
 .env.*
 *.zip
