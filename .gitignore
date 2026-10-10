@@ -1,0 +1,5 @@
+.openai/
+dist/
+.env
+.env.*
+*.zip
