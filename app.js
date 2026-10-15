@@ -6,9 +6,9 @@
     { key: "purpose", label: "Назначение" }
   ];
   const defaultOptions = {
-    type: ["Презентация", "Отчёт", "Шаблон", "Инструкция"],
-    product: ["УКС", "Исследования", "Фасилитация", "Консалтинг", "Общий"],
-    purpose: ["Учебная", "Клиентская", "Внутренняя"]
+    type: ["Презентация", "Отчёт", "Документ", "Инструкция"],
+    product: ["УКС", "Урбан", "МТА", "Команда Москвы", "Мастер взаимодействия"],
+    purpose: ["Учебная", "Продающая", "Внутренняя"]
   };
   const coverNames = ["orange", "black", "blue", "lime", "pink", "paper"];
 
@@ -67,13 +67,7 @@
   ];
 
   function uniqueValues(key) {
-    return [
-      "Все",
-      ...new Set([
-        ...(defaultOptions[key] || []),
-        ...materials.flatMap((material) => asArray(material[key]))
-      ])
-    ];
+    return ["Все", ...(defaultOptions[key] || [])];
   }
 
   function readUrlState() {
