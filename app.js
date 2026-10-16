@@ -1,4 +1,17 @@
-(() => {
+(async () => {
+  try {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = `materials.js?v=${Date.now()}`;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.append(script);
+    });
+    if (!Array.isArray(window.MATERIALS)) throw new Error("Некорректные данные каталога.");
+  } catch {
+    document.querySelector("#result-count").textContent = "Не удалось загрузить материалы. Обновите страницу.";
+    return;
+  }
   const STORAGE_KEY = "materials-catalog.custom-cards.v2";
   const filterDefinitions = [
     { key: "type", label: "Тип материала" },
