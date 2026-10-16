@@ -1,5 +1,43 @@
 window.MATERIALS = [
   {
+    "id": "material-e4fe5b05-df7",
+    "title": "Шаблон презентации Урбан Лидер",
+    "shortTitle": "Шаблон презентации Урбан Лидер",
+    "type": [
+      "Презентация"
+    ],
+    "product": [
+      "Урбан"
+    ],
+    "purpose": [
+      "Учебная"
+    ],
+    "format": "",
+    "version": "1.0",
+    "updated": "16 октября 2026",
+    "updatedIso": "2026-10-16",
+    "description": "Шаблон презентации основного Урбан Лидер",
+    "attention": "0. Перед работой делаем дубль шаблона и работаем в нем, так как там уже настроены цвета, заголовки, темы и так далее.",
+    "tags": [
+      "урбан",
+      "шаблон",
+      "презентация"
+    ],
+    "cover": "orange",
+    "coverColor": "#005b6d",
+    "coverCircleColor": "#337c8a",
+    "coverCircle": true,
+    "viewUrl": "https://docs.google.com/presentation/d/1jQGIM3Q6IIO57WsUktUMYv2K-VwdZtXOlEZmEdeEVeg/edit?slide=id.g3d0503503b9_3_19#slide=id.g3d0503503b9_3_19",
+    "downloadUrl": "",
+    "versions": [
+      [
+        "1.0",
+        "16.10.2026",
+        "Первая версия презентации"
+      ]
+    ]
+  },
+  {
     "id": "uks-client-presentation",
     "title": "Презентация УКС для заказчика",
     "shortTitle": "Для\nзаказчика",
