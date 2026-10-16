@@ -172,6 +172,7 @@
     ].filter(Boolean).join(";");
     const circleClass = material.coverCircle === false ? " cover--no-circle" : "";
     const shortTitle = escapeHtml(material.shortTitle || material.title).replace(/\n/g, "<br>");
+    const coverCode = [...material.product, material.format].filter(Boolean).join(" · ");
     return `
       <article
         class="material-card"
@@ -181,7 +182,7 @@
         data-id="${escapeHtml(material.id)}"
       >
         <div class="cover cover--${cover}${circleClass}" style="${coverStyle}" aria-hidden="true">
-          <span class="cover-code">${escapeHtml(material.product.join(" · "))} · ${escapeHtml(material.format)}</span>
+          <span class="cover-code">${escapeHtml(coverCode)}</span>
           <span class="cover-title">${shortTitle}</span>
         </div>
         <div class="card-body">
