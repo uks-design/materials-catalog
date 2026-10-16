@@ -299,11 +299,13 @@ kbd {
   bottom: -52%;
   width: 67%;
   aspect-ratio: 1;
-  border: 2.3rem solid currentColor;
+  border: 2.3rem solid var(--cover-circle, currentColor);
   border-radius: 50%;
   content: "";
-  opacity: 0.15;
+  opacity: var(--cover-circle-opacity, 0.15);
 }
+
+.cover--no-circle::after { display: none; }
 
 .cover-code,
 .cover-title {

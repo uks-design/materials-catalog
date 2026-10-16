@@ -12,6 +12,19 @@
   };
   const coverNames = ["orange", "black", "blue", "lime", "pink", "paper"];
 
+  function safeColor(value) {
+    return typeof value === "string" && /^#[0-9a-f]{6}$/i.test(value) ? value.toLowerCase() : "";
+  }
+
+  function coverInk(hex) {
+    const channels = [1, 3, 5].map((index) => {
+      const value = parseInt(hex.slice(index, index + 2), 16) / 255;
+      return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+    });
+    const luminance = channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722;
+    return luminance > 0.179 ? "#111111" : "#ffffff";
+  }
+
   const state = {
     query: "",
     type: "Все",
@@ -138,6 +151,13 @@
 
   function cardTemplate(material) {
     const cover = coverNames.includes(material.cover) ? material.cover : "orange";
+    const background = safeColor(material.coverColor);
+    const circle = safeColor(material.coverCircleColor);
+    const coverStyle = [
+      background && `--cover-bg:${background};--cover-ink:${coverInk(background)}`,
+      circle && `--cover-circle:${circle};--cover-circle-opacity:.38`
+    ].filter(Boolean).join(";");
+    const circleClass = material.coverCircle === false ? " cover--no-circle" : "";
     const shortTitle = escapeHtml(material.shortTitle || material.title).replace(/\n/g, "<br>");
     return `
       <article
@@ -147,7 +167,7 @@
         aria-label="Открыть материал: ${escapeHtml(material.title)}"
         data-id="${escapeHtml(material.id)}"
       >
-        <div class="cover cover--${cover}" aria-hidden="true">
+        <div class="cover cover--${cover}${circleClass}" style="${coverStyle}" aria-hidden="true">
           <span class="cover-code">${escapeHtml(material.product.join(" · "))} · ${escapeHtml(material.format)}</span>
           <span class="cover-title">${shortTitle}</span>
         </div>
