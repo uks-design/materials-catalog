@@ -1,57 +1,5 @@
 window.MATERIALS = [
   {
-    "id": "uks-training-presentation",
-    "title": "Шаблон презентации Урбан Лидер СТАРТ",
-    "shortTitle": "Шаблон презентации Урбан Лидер СТАРТ",
-    "type": [
-      "Презентация"
-    ],
-    "product": [
-      "Урбан"
-    ],
-    "purpose": [
-      "Другое"
-    ],
-    "format": "PPTX",
-    "version": "1.0",
-    "updated": "16 октября 2026",
-    "updatedIso": "2026-10-16",
-    "description": "Основной шаблон Урбан Лидер СТАРТ. Поддерживает Света Ентаева",
-    "attention": "Для работы делаем копию файла. Надо следить за написанием Урбан СТАРТ, не должно быть линейки",
-    "tags": [
-      "урбан",
-      "шаблон"
-    ],
-    "cover": "orange",
-    "coverColor": "#1a5648",
-    "coverCircleColor": "#226f5d",
-    "coverCircle": true,
-    "viewUrl": "https://docs.google.com/presentation/d/1ERsafHjzxKkZ2TE9wXESbh7j3M7XsaBa-r8OmKuchso/edit?slide=id.g3ef4732f148_0_41#slide=id.g3ef4732f148_0_41",
-    "downloadUrl": "",
-    "versions": [
-      [
-        "1.0",
-        "16.10.2026",
-        "Первая версия файла"
-      ],
-      [
-        "3.2",
-        "08.10.2026",
-        "Обновлены титульные слайды и правила работы с фотографиями"
-      ],
-      [
-        "3.1",
-        "12.09.2026",
-        "Добавлены примеры учебных схем"
-      ],
-      [
-        "3.0",
-        "04.08.2026",
-        "Переход на новый визуальный стиль"
-      ]
-    ]
-  },
-  {
     "id": "uks-client-presentation",
     "title": "Презентация УКС для заказчика",
     "shortTitle": "Для\nзаказчика",
