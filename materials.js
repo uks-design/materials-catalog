@@ -23,6 +23,9 @@ window.MATERIALS = [
       "шаблон"
     ],
     "cover": "orange",
+    "coverColor": "#1a5648",
+    "coverCircleColor": "#226f5d",
+    "coverCircle": true,
     "viewUrl": "https://docs.google.com/presentation/d/1ERsafHjzxKkZ2TE9wXESbh7j3M7XsaBa-r8OmKuchso/edit?slide=id.g3ef4732f148_0_41#slide=id.g3ef4732f148_0_41",
     "downloadUrl": "",
     "versions": [
