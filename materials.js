@@ -1,5 +1,38 @@
 window.MATERIALS = [
   {
+    "id": "material-44b04051-1a6",
+    "title": "Банк слайдов Урбан Лидер",
+    "shortTitle": "Банк слайдов",
+    "type": [
+      "Презентация"
+    ],
+    "product": [
+      "Урбан"
+    ],
+    "purpose": [
+      "Другое"
+    ],
+    "format": "PPTX",
+    "version": "1.0",
+    "updated": "16 октября 2026",
+    "updatedIso": "2026-10-16",
+    "description": "В банке слайдов все слайды есть в существующих презентациях. Они разложены по типам: с фото, с плашками, и так далее.\nПросьба ориентироваться на данные слайды при создании новых презентаций. Для единства можно брать и копировать эти слайды",
+    "attention": "Перед работой делаем дубль шаблона и работаем в нем, так как там уже настроены цвета, заголовки, темы и так далее",
+    "tags": [
+      "урбан",
+      "шаблон",
+      "презентация",
+      "банк слайдов"
+    ],
+    "cover": "orange",
+    "coverColor": "#005b6d",
+    "coverCircleColor": "#337c8a",
+    "coverCircle": true,
+    "viewUrl": "https://docs.google.com/presentation/d/1ZeoVBakpbppMXldmWl92IgJzFB2y74aN5YxhZKz5Pow/edit?slide=id.h7ee84849c4ddd2b3_0_2150#slide=id.h7ee84849c4ddd2b3_0_2150",
+    "downloadUrl": "",
+    "versions": []
+  },
+  {
     "id": "material-e4fe5b05-df7",
     "title": "Шаблон презентации Урбан Лидер",
     "shortTitle": "Шаблон презентации Урбан Лидер",
