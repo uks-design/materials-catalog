@@ -12,7 +12,7 @@ window.MATERIALS = [
     "purpose": [
       "Учебная"
     ],
-    "format": "",
+    "format": "PPTX",
     "version": "1.0",
     "updated": "16 октября 2026",
     "updatedIso": "2026-10-16",
