@@ -202,31 +202,37 @@ window.MATERIALS = [
     "id": "presentation-checklist",
     "title": "Чек-лист перед отправкой презентации",
     "shortTitle": "Проверка\nпрезентации",
-    "type": "Инструкция",
-    "product": "Общий",
-    "purpose": "Внутренняя",
+    "type": [
+      "Инструкция"
+    ],
+    "product": [
+      "Общий"
+    ],
+    "purpose": [
+      "Внутренняя"
+    ],
     "format": "PDF",
     "version": "2.1",
-    "updated": "9 сентября 2026",
-    "updatedIso": "2026-09-09",
+    "updated": "19 октября 2026",
+    "updatedIso": "2026-10-19",
     "description": "Финальная проверка текста, сетки, источников, конфиденциальности и качества экспорта.",
-    "attention": "Пройдите чек-лист после экспорта PDF, а не только в редакторе. Отдельно проверьте кликабельность ссылок и отображение шрифтов.",
+    "attention": "",
     "tags": [
       "качество",
       "проверка",
       "pdf"
     ],
     "cover": "paper",
+    "coverColor": "#e9e8e2",
+    "coverCircleColor": "#ffffff",
+    "coverCircle": true,
+    "viewUrl": "https://docs.google.com/document/d/1bX3_o9P3EUnLbsYJ5v13wVl5ACDOD_oIEOB1adroAMA/edit?tab=t.0#heading=h.d3siday8kegc",
+    "downloadUrl": "files/2026-10-19-2bfa31c8-%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5-%D1%81-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%BC-PowerPoint-%D0%B4%D0%BB%D1%8F-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD%D0%B5%D1%80%D0%B0.pdf",
     "versions": [
       [
-        "2.1",
+        "1.0",
         "09.09.2026",
-        "Добавлена проверка внешних ссылок"
-      ],
-      [
-        "2.0",
-        "14.03.2026",
-        "Обновлены правила экспорта"
+        "Файл загружен"
       ]
     ]
   },
