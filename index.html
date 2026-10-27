@@ -19,7 +19,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Cpath d='M17 17h30v10H27v6h16v9H27v5H17z' fill='%23ff7a00'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20261016" />
+    <link rel="stylesheet" href="styles.css?v=20261027" />
   </head>
   <body>
     <main class="shell">
@@ -32,6 +32,18 @@
           Актуальные шаблоны, презентации и&nbsp;инструкции — без поиска по карточкам и&nbsp;комментариям.
         </p>
       </header>
+
+      <section class="weekly-update" id="weekly-update" aria-labelledby="weekly-update-title" hidden>
+        <div class="weekly-update-heading">
+          <div>
+            <p class="weekly-update-label">Обновления каталога <time id="weekly-update-date"></time></p>
+            <h2 id="weekly-update-title">Что нового на этой неделе</h2>
+          </div>
+          <button class="weekly-update-close" id="weekly-update-close" type="button" aria-label="Закрыть обновления" title="Закрыть обновления">×</button>
+        </div>
+        <p class="weekly-update-text" id="weekly-update-text" hidden></p>
+        <div class="weekly-update-links" id="weekly-update-links"></div>
+      </section>
 
       <section class="controls" aria-label="Поиск и фильтры">
         <div class="search-wrap">
@@ -81,6 +93,6 @@
       </div>
     </dialog>
 
-    <script src="app.js?v=20261016-2"></script>
+    <script src="app.js?v=20261027"></script>
   </body>
 </html>

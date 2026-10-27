@@ -111,6 +111,28 @@ h1 {
   line-height: 1.45;
 }
 
+.weekly-update {
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem 1.15rem;
+  border-top: 2px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.weekly-update[hidden] { display: none; }
+.page-header:has(+ .weekly-update:not([hidden])) { padding-bottom: 2rem; }
+.weekly-update-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
+.weekly-update-label { margin: 0 0 0.25rem; color: var(--accent); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+.weekly-update-label time { margin-left: 0.5rem; color: var(--muted); font-weight: 500; text-transform: none; }
+.weekly-update h2 { margin: 0; font-size: 1.25rem; line-height: 1.25; }
+.weekly-update-close { display: grid; flex: 0 0 2rem; width: 2rem; height: 2rem; place-items: center; border: 0; background: transparent; color: var(--muted); font-size: 1.55rem; line-height: 1; cursor: pointer; }
+.weekly-update-close:hover { color: var(--ink); background: var(--soft); }
+.weekly-update-text { max-width: 60rem; margin: 0.65rem 0 0; color: #373735; font-size: 0.94rem; white-space: pre-line; overflow-wrap: anywhere; }
+.weekly-update-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.8rem; }
+.weekly-update-links:empty { display: none; }
+.weekly-update-link { display: inline-flex; gap: 0.45rem; max-width: 100%; padding: 0.4rem 0.65rem; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: 0.79rem; font-weight: 600; text-align: left; overflow-wrap: anywhere; cursor: pointer; }
+.weekly-update-link:hover { border-color: var(--accent); }
+.weekly-update-link span { flex: 0 0 auto; color: var(--muted); font-weight: 500; }
+
 .controls {
   position: relative;
   z-index: 2;
@@ -695,6 +717,10 @@ kbd {
   .intro {
     font-size: 1.05rem;
   }
+
+  .weekly-update { margin-bottom: 1.25rem; padding: 0.85rem 0.9rem 1rem; }
+  .weekly-update h2 { font-size: 1.05rem; }
+  .weekly-update-link { width: 100%; }
 
   .dialog-title {
     font-size: 2.25rem;

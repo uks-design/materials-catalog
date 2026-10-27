@@ -55,6 +55,11 @@
   const dialog = document.querySelector("#material-dialog");
   const dialogContent = document.querySelector("#dialog-content");
   const dialogClose = document.querySelector("#dialog-close");
+  const weeklyUpdate = document.querySelector("#weekly-update");
+  const weeklyUpdateDate = document.querySelector("#weekly-update-date");
+  const weeklyUpdateText = document.querySelector("#weekly-update-text");
+  const weeklyUpdateLinks = document.querySelector("#weekly-update-links");
+  const weeklyUpdateClose = document.querySelector("#weekly-update-close");
 
   const normalize = (value) => String(value ?? "").toLocaleLowerCase("ru-RU");
   const asArray = (value) =>
@@ -91,6 +96,18 @@
     ...readSavedMaterials(),
     ...(Array.isArray(window.MATERIALS) ? window.MATERIALS : []).map(normalizeMaterial)
   ];
+
+  try {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = `news.js?v=${Date.now()}`;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.append(script);
+    });
+  } catch {
+    // The catalog remains usable if the optional announcement is unavailable.
+  }
 
   function uniqueValues(key) {
     return ["Все", ...(defaultOptions[key] || [])];
@@ -335,6 +352,50 @@
     window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
   }
 
+  function renderWeeklyUpdate() {
+    const news = window.CATALOG_NEWS;
+    if (!news || news.enabled !== true || !news.revision) return;
+    const dismissKey = "materials-catalog.dismissed-news";
+    try {
+      if (localStorage.getItem(dismissKey) === news.revision) return;
+    } catch {}
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(news.publishedAt || "")) {
+      const date = new Date(`${news.publishedAt}T12:00:00`);
+      if (!Number.isNaN(date.getTime())) {
+        weeklyUpdateDate.textContent = new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "long" }).format(date);
+      }
+    }
+    weeklyUpdateText.textContent = typeof news.text === "string" ? news.text : "";
+    weeklyUpdateText.hidden = !weeklyUpdateText.textContent;
+    weeklyUpdateLinks.replaceChildren();
+    for (const [label, ids] of [["Добавлено", news.added], ["Обновлено", news.updated]]) {
+      if (!Array.isArray(ids)) continue;
+      for (const id of ids) {
+        const material = materials.find((item) => item.id === id);
+        if (!material) continue;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "weekly-update-link";
+        button.dataset.newsMaterial = id;
+        const prefix = document.createElement("span");
+        prefix.textContent = label;
+        button.append(prefix, document.createTextNode(material.title));
+        weeklyUpdateLinks.append(button);
+      }
+    }
+    if (!weeklyUpdateText.textContent && !weeklyUpdateLinks.childElementCount) return;
+    weeklyUpdate.hidden = false;
+    weeklyUpdateClose.addEventListener("click", () => {
+      weeklyUpdate.hidden = true;
+      try { localStorage.setItem(dismissKey, news.revision); } catch {}
+    });
+    weeklyUpdateLinks.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-news-material]");
+      if (button) openMaterial(button.dataset.newsMaterial);
+    });
+  }
+
   function registerWebMcp() {
     const context = document.modelContext;
     if (!context?.registerTool) return;
@@ -431,6 +492,7 @@
   readUrlState();
   renderFilters();
   renderResults();
+  renderWeeklyUpdate();
   registerWebMcp();
 
   const initialId = window.location.hash.slice(1);
