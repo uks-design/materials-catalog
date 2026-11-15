@@ -43,7 +43,7 @@ function renderResults() {
   const query = search.value.trim().toLocaleLowerCase('ru');
   const visible = data.products.filter(product => {
     const text = [product.number, product.name, product.fullName, product.summary].join(' ').toLocaleLowerCase('ru');
-    const styleMatches = query || activeFilter === 'all' || (activeFilter === 'special' ? product.style !== 'base' : product.style === activeFilter);
+    const styleMatches = query || activeFilter === 'all' || product.style === activeFilter;
     return styleMatches && text.includes(query);
   }).sort((a, b) => Number(a.number) - Number(b.number));
   document.querySelector('#count').textContent = `${visible.length} ${visible.length === 1 ? 'продукт' : visible.length % 10 >= 2 && visible.length % 10 <= 4 && (visible.length % 100 < 12 || visible.length % 100 > 14) ? 'продукта' : 'продуктов'}`;
