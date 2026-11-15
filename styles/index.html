@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стили продуктов — дизайн-команда</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar" aria-label="Разделы каталога">
+      <a class="brand" href="../">Дизайн-команда</a>
+      <div class="nav"><a href="../">Материалы</a><a class="active" href="./" aria-current="page">Стили продуктов</a></div>
+    </nav>
+    <header class="intro">
+      <div><p class="eyebrow">Визуальные правила</p><h1>Стили продуктов</h1></div>
+      <p>Что взять за основу, что изменить и&nbsp;где посмотреть проверенные макеты.</p>
+    </header>
+    <aside class="notice"><strong>Основа — стиль УКС.</strong><span>Если продукт не указан ниже, используйте его без изменений.</span></aside>
+
+    <section class="browse" id="browse" aria-labelledby="browse-title">
+      <div class="section-head"><h2 id="browse-title">Продукты</h2><span id="count"></span></div>
+      <label class="search-label" for="search">Поиск продукта</label>
+      <input id="search" class="search" type="search" placeholder="Номер или название продукта" autocomplete="off">
+      <div class="filters" role="group" aria-label="Тип оформления">
+        <span class="filter-label">Тип оформления</span>
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">Все</button>
+        <button class="filter" type="button" data-filter="special" aria-pressed="false">Есть отличия</button>
+        <button class="filter" type="button" data-filter="variant" aria-pressed="false">УКС с отличиями</button>
+        <button class="filter" type="button" data-filter="own" aria-pressed="false">Свой стиль</button>
+        <button class="filter" type="button" data-filter="base" aria-pressed="false">Стандарт УКС</button>
+      </div>
+      <div id="results" class="results" aria-live="polite"></div>
+    </section>
+    <section id="detail" class="detail" hidden aria-live="polite"></section>
+  </main>
+  <dialog id="preview" class="preview-dialog"><div class="dialog-bar"><strong id="preview-title"></strong><button id="close-preview" type="button" aria-label="Закрыть">×</button></div><img id="preview-image" alt=""></dialog>
+</body>
+</html>

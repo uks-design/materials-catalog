@@ -65,24 +65,23 @@ textarea:focus-visible,
 .shell {
   width: min(100% - 2rem, 76rem);
   margin-inline: auto;
-  padding: clamp(2rem, 5vw, 5.5rem) 0 3rem;
+  padding: 0 0 3rem;
 }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; min-height: 72px; border-bottom: 1px solid var(--line); }
+.topbar .brand { color: var(--accent); font-size: 0.86rem; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+.topbar-links { display: flex; align-items: center; gap: 28px; }
+.topbar-links a { color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; }
+.topbar-links a:not(.active) { color: var(--muted); }
+.topbar-links a.active { padding: 25px 0 23px; border-bottom: 2px solid var(--accent); }
 
 .page-header {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(17rem, 0.8fr);
   gap: 2rem;
   align-items: end;
+  padding-top: clamp(2rem, 5vw, 4rem);
   padding-bottom: clamp(2.5rem, 6vw, 5rem);
-}
-
-.header-bar {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: -0.75rem;
 }
 
 .eyebrow {
@@ -686,10 +685,6 @@ kbd {
     grid-template-columns: 1fr;
   }
 
-  .header-bar {
-    margin-bottom: 0;
-  }
-
   .intro {
     max-width: 40rem;
   }
@@ -707,8 +702,13 @@ kbd {
 @media (max-width: 38rem) {
   .shell {
     width: min(100% - 1.2rem, 76rem);
-    padding-top: 1.75rem;
   }
+
+  .topbar { min-height: 58px; }
+  .topbar .brand { font-size: 0.72rem; }
+  .topbar-links { gap: 12px; }
+  .topbar-links a { font-size: 12px; }
+  .topbar-links a.active { padding: 19px 0 17px; }
 
   h1 {
     font-size: 2.75rem;
