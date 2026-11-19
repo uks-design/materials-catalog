@@ -1,5 +1,38 @@
 window.MATERIALS = [
   {
+    "id": "material-3d60926b-0a4",
+    "title": "Учебная презентация УКС",
+    "shortTitle": "Учебная презентация УКС",
+    "type": [
+      "Презентация"
+    ],
+    "product": [
+      "УКС"
+    ],
+    "purpose": [
+      "Учебная"
+    ],
+    "format": "PPTX, Google",
+    "version": "1.0",
+    "updated": "19 ноября 2026",
+    "updatedIso": "2026-11-19",
+    "description": "Это шаблон для образовательных стандартных презентаций. Используем везде, где нужна учебная преза",
+    "attention": "Для работы делаем копию файла. Не забываем включать сетку",
+    "tags": [
+      "шаблон",
+      "презентация",
+      "УКС",
+      "учебная"
+    ],
+    "cover": "orange",
+    "coverColor": "#e8ebf5",
+    "coverCircleColor": "#d0d6ec",
+    "coverCircle": true,
+    "viewUrl": "https://docs.google.com/presentation/d/1jv-B8ZB-wpawa4p80jR6D5q4DIo7lEbI/edit?slide=id.p9#slide=id.p9",
+    "downloadUrl": "",
+    "versions": []
+  },
+  {
     "id": "material-eb0cbe8f-e97",
     "title": "Шаблон презентации ДТОИВ",
     "shortTitle": "Шаблон презентации ДТОИВ",

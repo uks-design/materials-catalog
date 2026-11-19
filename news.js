@@ -1,10 +1,11 @@
 window.CATALOG_NEWS = {
   "enabled": true,
-  "publishedAt": "2026-11-18",
-  "text": "Добавлен шаблон презентаций ДТОИВ",
+  "publishedAt": "2026-11-19",
+  "text": "Добавлен шаблон презентаций ДТОИВ и шаблон учебной презентации.",
   "added": [
-    "material-eb0cbe8f-e97"
+    "material-eb0cbe8f-e97",
+    "material-3d60926b-0a4"
   ],
   "updated": [],
-  "revision": "2881b21e-2779-451d-aba2-23978ac1ff3a"
+  "revision": "d194366e-147d-4447-9a63-22252ac162bd"
 };
