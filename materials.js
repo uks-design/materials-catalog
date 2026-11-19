@@ -1,5 +1,40 @@
 window.MATERIALS = [
   {
+    "id": "material-d6a04799-2ed",
+    "title": "Документ УКС КМ с колонтитулами",
+    "shortTitle": "Документ в ворде с колонтитулами УКС КМ",
+    "type": [
+      "Документ"
+    ],
+    "product": [
+      "УКС"
+    ],
+    "purpose": [
+      "Другое"
+    ],
+    "format": "DOCX",
+    "version": "1.0",
+    "updated": "19 ноября 2026",
+    "updatedIso": "2026-11-19",
+    "description": "Документ в ворде с колонтитулами УКС КМ. Внутри зашит макрос для проверки цвета шрифта",
+    "attention": "Колонтитулы зашиты в документ, не добавляйте новые. Внутри зашит макрос для проверки цвета шрифта",
+    "tags": [
+      "шаблон",
+      "документ",
+      "ворд",
+      "УКС",
+      "КМ",
+      "Команда Москвы"
+    ],
+    "cover": "orange",
+    "coverColor": "#e8ebf5",
+    "coverCircleColor": "#d0d6ec",
+    "coverCircle": true,
+    "viewUrl": "",
+    "downloadUrl": "files/2026-11-19-d74302f5-%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD-%D0%B2%D0%BE%D1%80%D0%B4_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C-2026.docx",
+    "versions": []
+  },
+  {
     "id": "material-3d60926b-0a4",
     "title": "Учебная презентация УКС",
     "shortTitle": "Учебная презентация УКС",
@@ -47,8 +82,8 @@ window.MATERIALS = [
     ],
     "format": "PPTX",
     "version": "1.0",
-    "updated": "18 ноября 2026",
-    "updatedIso": "2026-11-18",
+    "updated": "19 ноября 2026",
+    "updatedIso": "2026-11-19",
     "description": "Шаблон презентации для продуктов ДТОИВ. В основе стиль УКС, но с изменениями.",
     "attention": "Не используем 3D-иконки.",
     "tags": [
@@ -57,8 +92,8 @@ window.MATERIALS = [
       "ДТОИВ"
     ],
     "cover": "orange",
-    "coverColor": "#ffffff",
-    "coverCircleColor": "#ffcfd9",
+    "coverColor": "#e8ebf5",
+    "coverCircleColor": "#d0d6ec",
     "coverCircle": true,
     "viewUrl": "https://docs.google.com/presentation/d/1qQfDbL31P5eF4NUM7lxUiOoeiHlLOZN7/edit?slide=id.p7#slide=id.p7",
     "downloadUrl": "",
