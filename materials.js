@@ -1,5 +1,44 @@
 window.MATERIALS = [
   {
+    "id": "material-ded856aa-3b4",
+    "title": "Фотографии топов",
+    "shortTitle": "Фотографии топов",
+    "type": [
+      "Другое"
+    ],
+    "product": [
+      "УКС"
+    ],
+    "purpose": [
+      "Другое"
+    ],
+    "format": "JPG PNG",
+    "version": "1.0",
+    "updated": "23 ноября 2026",
+    "updatedIso": "2026-11-23",
+    "description": "Подборка фото топов",
+    "attention": "",
+    "tags": [
+      "фото",
+      "подборка",
+      "топ",
+      "Стецык",
+      "Ровенский",
+      "Фивейский",
+      "Власова",
+      "Добролежа",
+      "Логинова",
+      "Каленикова"
+    ],
+    "cover": "orange",
+    "coverColor": "#ffffff",
+    "coverCircleColor": "#ffffff",
+    "coverCircle": false,
+    "viewUrl": "https://mostech-cloud.mos.ru/s/tEmC9J6zKkPRmxC",
+    "downloadUrl": "",
+    "versions": []
+  },
+  {
     "id": "material-d6a04799-2ed",
     "title": "Документ УКС КМ с колонтитулами",
     "shortTitle": "Документ в ворде с колонтитулами УКС КМ",

@@ -1,12 +1,10 @@
 window.CATALOG_NEWS = {
   "enabled": true,
-  "publishedAt": "2026-11-19",
-  "text": "Добавлены\n- шаблон презентаций ДТОИВ\n- шаблон учебной презентации\n- документ с колонтитулами",
+  "publishedAt": "2026-11-23",
+  "text": "Добавлены\n- фотографии топов",
   "added": [
-    "material-eb0cbe8f-e97",
-    "material-3d60926b-0a4",
-    "material-d6a04799-2ed"
+    "material-ded856aa-3b4"
   ],
   "updated": [],
-  "revision": "04906b29-9629-42c7-b98d-1b186cd40959"
+  "revision": "4b6c4a38-b1b9-423b-8802-8ffca19338d3"
 };
