@@ -14,8 +14,8 @@ window.MATERIALS = [
     ],
     "format": "JPG PNG",
     "version": "1.0",
-    "updated": "23 ноября 2026",
-    "updatedIso": "2026-11-23",
+    "updated": "24 ноября 2026",
+    "updatedIso": "2026-11-24",
     "description": "Подборка фото топов",
     "attention": "",
     "tags": [
@@ -31,9 +31,9 @@ window.MATERIALS = [
       "Каленикова"
     ],
     "cover": "orange",
-    "coverColor": "#ffffff",
-    "coverCircleColor": "#ffffff",
-    "coverCircle": false,
+    "coverColor": "#e8ebf5",
+    "coverCircleColor": "#d0d6ec",
+    "coverCircle": true,
     "viewUrl": "https://mostech-cloud.mos.ru/s/tEmC9J6zKkPRmxC",
     "downloadUrl": "",
     "versions": []
